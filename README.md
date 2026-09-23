@@ -1,4 +1,4 @@
-# GTAE
+# Towards Robust Text-Attributed Federated Graph Learning: Multimodal Threats and Defense
 Code of GTAE and STRUM from *Towards Robust Text-Attributed Federated Graph Learning: Multimodal Threats and Defense*.
 
 GTAE applies influence-guided edge flips followed by embedding-driven lexical perturbations. STRUM combines structure-side representation perturbation, lexical adversarial augmentation, and robustness-aware federated aggregation.
