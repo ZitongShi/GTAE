@@ -1,0 +1,47 @@
+seed: 42
+device: cuda
+dataset:
+  name: cora
+  root: data
+  processed_path: null
+  texts_path: null
+  partition: louvain
+  clients: 5
+  dirichlet_alpha: 0.5
+model:
+  backbone: meta-llama/Llama-2-7b-hf
+  fusion: llaga
+  hidden_dim: 1024
+  graph_layers: 4
+  graph_heads: 4
+  dropout: 0.1
+  freeze_text_encoder: true
+  max_length: 256
+training:
+  rounds: 1
+  local_epochs: 5
+  batch_size: 12
+  gradient_accumulation: 2
+  learning_rate: 0.00001
+  translator_learning_rate: 0.0001
+  weight_decay: 0.05
+  gradient_clip: 0.1
+attack:
+  malicious_clients: 1
+  target_fraction: 1.0
+  structure_budget_scale: 1.0
+  structure_candidates: 64
+  text_budget: 0.15
+  synonym_candidates: 8
+  refinement_steps: 10
+  refinement_samples: 16
+  refinement_delta: 0.01
+  refinement_lr: 0.05
+  refinement_l1: 0.001
+  semantic_weight: 0.1
+defense:
+  epsilon: 0.1
+  adversarial_steps: 3
+  adversarial_step_size: 0.03
+  text_mix_alpha: 0.5
+
