@@ -14,7 +14,6 @@ python -m venv .venv
 object with `x`, `edge_index`, `y`, `texts` and the train/val/test masks.
 
 ```bash
-source src/env.sh
 python src/prepare_data.py --datasets cora pubmed --features bow sbert
 ```
 
